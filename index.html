@@ -14,7 +14,7 @@
     height: 100%; 
     margin: 0; 
     padding: 0; 
-    overflow-x: hidden; 
+    overflow-x: none; 
     box-sizing: border-box; 
 }
         .navbar {
@@ -301,8 +301,8 @@ height: 6vh;
     .about-section {
         width: 80%; 
         padding: 15px; 
-        height: 10vh;
-        margin: -300px auto 20px; 
+        height: auto;
+        
         margin-top: -380px;
     }
 
@@ -952,7 +952,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         .then(data => {
             if (data === 'Success') {
                 alert("Form submitted successfully!");
-              
+                // Optionally, clear the form after submission
                 document.getElementById("contactForm").reset();
             } else {
                 alert("Error: " + data);
